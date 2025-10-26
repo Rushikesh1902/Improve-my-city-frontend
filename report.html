@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Report — CivicEye</title>
+<link rel="stylesheet" href="style_showcase.css"/></head><body>
+<div class="app-wrap">
+  <header class="header"><div class="brand"><div class="logo"><img src="assets/logo.png" alt="logo"/></div><div><div class="title">CivicEye</div><div class="tag">Report. Track. Resolve.</div></div></div><div><a class="btn ghost" href="index.html">← Home</a></div></header>
+
+  <main class="grid-2">
+    <section class="card">
+      <div class="illust"><div class="big">🏗️</div><p>Show the issue location on map and attach a photo for authorities to act faster.</p></div>
+    </section>
+
+    <aside class="right-col card">
+      <h3 style="margin-top:0">Report an Issue</h3>
+      <form id="reportForm" class="form card-body">
+        <input type="hidden" id="categoryInput" />
+        <div class="field">
+          <div class="chips" style="margin-bottom:8px">
+            <div class="chip" data-value="Pothole"><img src="assets/pothole.svg" alt="" style="width:18px"/><span style="margin-left:6px">Pothole</span></div>
+            <div class="chip" data-value="Garbage"><img src="assets/garbage.svg" alt="" style="width:18px"/><span style="margin-left:6px">Garbage</span></div>
+            <div class="chip" data-value="Streetlight"><img src="assets/light.svg" alt="" style="width:18px"/><span style="margin-left:6px">Streetlight</span></div>
+            <div class="chip" data-value="Water"><span>💧</span><span style="margin-left:6px">Water</span></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <input id="description" class="input" placeholder=" " />
+          <label class="floating">Short description (e.g., Large pothole near bus stop)</label>
+        </div>
+
+        <div class="field">
+          <div id="dropArea" class="drop"><div id="thumb" class="thumb">📷</div><div class="small">Drag & drop an image or click to choose</div><input id="photo" type="file" accept="image/*" style="display:none"/></div>
+        </div>
+
+        <div class="field">
+          <input id="location" class="input" placeholder=" " />
+          <label class="floating">Location (auto-detected or enter address)</label>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Submit Complaint</button>
+          <a class="btn ghost" href="index.html">Cancel</a>
+        </div>
+        <div class="meta">Tip: Use clear descriptions and attach a photo to speed up resolution.</div>
+      </form>
+    </aside>
+  </main>
+</div>
+
+<div id="successModal" class="modal" style="display:none"><div class="modal-card"><div style="font-size:44px">✅</div><h3>Complaint Submitted</h3><p id="modalText">ID: CIV-XXXXX</p><div style="margin-top:12px"><a class="btn primary" href="dashboard.html">Track Now</a> <a class="btn ghost" href="index.html">Home</a></div></div></div>
+
+<script src="script_showcase.js"></script></body></html>
