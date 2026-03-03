@@ -1,0 +1,12 @@
+{
+  "name": "civiceye-backend",
+  "version": "1.0.0",
+  "description": "Example backend skeleton for CivicEye",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
